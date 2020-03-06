@@ -4,11 +4,6 @@ Partial implementation of [Generative Teaching Networks](https://arxiv.org/abs/1
 MNIST Teacher/Learner was implemented using [PyTorch](https://pytorch.org/) and [higher](https://github.com/facebookresearch/higher)
 with aim to confirm and further investigate curriculum generation properties of GTN
 
-### Notes: 
- * Weight Normalization and gradient checkpointing were not implemented as not being necessary - 
-learning showed almost no variance and model fit into 11GB of GPU memory
- * BatchNorm and Kaiming initialization were necessary for stable learning
-
 ## GTN overview
 GTN is composed of two networks (both uses CNN + linear layers):
  * teacher - takes random vectors as input and produces MNIST-like images
@@ -100,13 +95,9 @@ Images produced by teacher - variant "random"\
 
 * GTN results on MNIST dataset was reproduced with similar performance, compare
 
-Image taken from [paper - Figure 1(c)](https://arxiv.org/abs/1912.07768):\
-![image](./doc/gtn_paper_comparison.png)
-
-and 
-
-Experiment A results\
-![chart](./doc/t_20i_32b_teacher_input_loss.png)
+| GTN results [paper - Figure 1(c)](https://arxiv.org/abs/1912.07768) | Experiment A results |
+:------------:|:-----------:
+![image](./doc/gtn_paper_comparison.png) | ![chart](./doc/t_20i_32b_teacher_input_loss.png)
 
 lower accuracy of our result is due to lower batch_size (32 in our experiment vs 128 in GTN paper) and possibly due to 
 some missing features and fine tuning - like weight normalization and gradient checkpointing.
@@ -132,3 +123,8 @@ Run single experiment using `experiments/mnist_experiment.py` file. \
 Run multiple experiments using `experiments/run_tasks.py` - current setup will replicate presented results. \
 View results using omniboard or `experiments/ntb_result_analyzer.ipynb` notebook - running all cells will generate 
 images and charts presented in results (sacred run ids have to be changed)
+
+### Notes: 
+ * Weight Normalization and gradient checkpointing were not implemented as not being necessary - 
+learning showed almost no variance and model fit into 11GB of GPU memory
+ * BatchNorm and Kaiming initialization were necessary for stable learning
