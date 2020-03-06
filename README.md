@@ -119,9 +119,9 @@ Requires python version >= 3.7
 
 ## How to Run
 
-Run single experiment using `experiments/mnist_experiment.py` file. \
-Run multiple experiments using `experiments/run_tasks.py` - current setup will replicate presented results. \
-View results using omniboard or `experiments/ntb_result_analyzer.ipynb` notebook - running all cells will generate 
+Run single experiment using [`experiments/mnist_experiment.py`](./experiments/mnist_experiment.py) file. \
+Run multiple experiments using [`experiments/run_tasks.py`](./experiments/run_tasks.py) - current setup will replicate presented results. \
+View results using omniboard or [`experiments/ntb_result_analyzer.ipynb`](./experiments/ntb_result_analyzer.ipynb) notebook - running all cells will generate 
 images and charts presented in results (sacred run ids have to be changed)
 
 ### Notes: 
