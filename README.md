@@ -71,8 +71,9 @@ Images produced by teacher - variant "random"\
 ![chart](./doc/t_10i_32b_teacher_input_shuffled.png)
 
 
+<a name="experiment_b_learned"></a>
 Images produced by teacher - variant "learned"\
-<a name="experiment_b_learned"></a>![chart](./doc/t_10i_32b_data_learned.png)\
+![chart](./doc/t_10i_32b_data_learned.png)\
 Images produced by teacher - variant "random_fixed"\
 ![chart](./doc/t_10i_32b_data_random_fixed.png)\
 Images produced by teacher - variant "random"\
