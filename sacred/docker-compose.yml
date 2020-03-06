@@ -1,0 +1,41 @@
+version: '3'
+services:
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sample
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: db
+    expose:
+      - 27017
+    volumes:
+      - omniboard_mongo:/data/db
+    networks:
+      - omniboard
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 4G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+  omniboard:
+    image: vivekratnavel/omniboard:latest
+    command: ["--mu", "mongodb://sample:password@mongo:27017/db?authSource=admin"]
+    ports:
+      - 9000:9000
+    networks:
+      - omniboard
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+volumes:
+  omniboard_mongo:
+networks:
+  omniboard:
