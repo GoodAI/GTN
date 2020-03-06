@@ -73,11 +73,13 @@ Images produced by teacher - variant "random"\
 
 <a name="experiment_b_learned"></a>
 Images produced by teacher - variant "learned"\
-![chart](./doc/t_10i_32b_data_learned.png)\
+![chart](./doc/t_10i_32b_data_learned.png)
+
 Images produced by teacher - variant "random_fixed"\
-![chart](./doc/t_10i_32b_data_random_fixed.png)\
+![chart](./doc/t_10i_32b_data_random_fixed.png)
+
 Images produced by teacher - variant "random"\
-![chart](./doc/t_10i_32b_data_random.png)\
+![chart](./doc/t_10i_32b_data_random.png)
 
 ### Experiment C: batch_size: 16, inner_loop_steps: 10
 ![chart](./doc/t_10i_16b_teacher_input_loss.png)
@@ -85,11 +87,13 @@ Images produced by teacher - variant "random"\
 ![chart](./doc/t_10i_16b_teacher_input_shuffled.png)
 
 Images produced by teacher - variant "learned"\
-![chart](./doc/t_10i_16b_data_learned.png)\
+![chart](./doc/t_10i_16b_data_learned.png)
+
 Images produced by teacher - variant "random_fixed"\
-![chart](./doc/t_10i_16b_data_random_fixed.png)\
+![chart](./doc/t_10i_16b_data_random_fixed.png)
+
 Images produced by teacher - variant "random"\
-![chart](./doc/t_10i_16b_data_random.png)\
+![chart](./doc/t_10i_16b_data_random.png)
 
 
 ### Discussion
